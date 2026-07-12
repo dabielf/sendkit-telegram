@@ -59,9 +59,6 @@ app.post("/:botToken/mcp", async (c) => {
 
 app.notFound((c) => c.json({ error: "Not found" }, 404));
 
-const port = Number(process.env.PORT ?? 3000);
-
 export default {
-    port,
     fetch: app.fetch,
 };
